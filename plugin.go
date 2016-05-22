@@ -144,7 +144,6 @@ func commandInfo() *exec.Cmd {
 func commandBuild(build Build) *exec.Cmd {
 	cmd := exec.Command(
 		"/usr/bin/docker", "build",
-		"--pull=true",
 		"--rm=true",
 		"-f", build.Dockerfile,
 		"-t", build.Name,
